@@ -1,0 +1,363 @@
+<game>
+    <startPos>1,0</startPos>
+    <description>
+        <text>You find yourself in a room with walls made of stone. Why don't you look around?</text>
+    </description>
+    <winCondition>
+        <requires>questComplete</requires>
+        <description>
+            <text>Good job! You've defeated the goblin and won the game</text>
+        </description>
+    </winCondition>
+
+    <room>
+        <position>1,0</position>
+        <description>
+            <requires>roomOnFire</requires>
+            <text>Just a regular room on fire</text>
+        </description>
+        <description>
+            <text>Just a regular room</text>
+        </description>
+        <itemRef>item_unlit_torch</itemRef>
+        <itemRef>item_lighter</itemRef>
+        <objectRef>object_fireplace</objectRef>
+        <objectRef>object_stone_door</objectRef>
+        <goNorth>
+            <requires>roomOnFire</requires>
+            <description>
+                <text>You quickly go through the now open door and leave that burning mess behind</text>
+            </description>
+        </goNorth>
+        <north>
+            <description>
+                <requires>roomOnFire</requires>
+                <text>The stone door now stands open</text>
+            </description>
+            <description>
+                <text>There's a stone door in the wall to the north, but it won't budge even when you push on it with your entire strength</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <requires>not roomOnFire, not torchLit</requires>
+                <text>There's a tiny hole in the stone wall near the ceiling that lets in just enough light for you to make out what's inside of the room you're in</text>
+            </description>
+        </south>
+    </room>
+
+    <room>
+        <position>1,1</position>
+        <description>
+            <text>Another regular room</text>
+        </description>
+        <characterRef>character_angry_man</characterRef>
+        <goWest>
+            <requires>questReceived</requires>
+            <description>
+                <text>You gather your courage and go through the wooden door</text>
+            </description>
+        </goWest>
+        <south>
+            <description>
+                <text>The burning room is back that way. No point in going back there</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <requires>questReceived</requires>
+                <text>That's the door to the room with the goblin you need to kill</text>
+            </description>
+            <description>
+                <text>There's a wooden door there. You can hear some terrifying noises from behind it</text>
+            </description>
+        </west>
+    </room>
+
+    <room>
+        <position>0,1</position>
+        <description>
+            <text>Yet another room with nothing special about it</text>
+        </description>
+        <monsterRef>monster_goblin</monsterRef>
+        <goEast>
+            <description>
+                <text>You chicken out and go back through the door you came in</text>
+            </description>
+        </goEast>
+        <east>
+            <description>
+                <text>That's the door back to the room where you came from</text>
+            </description>
+        </east>
+    </room>
+
+    <item>
+        <id>item_unlit_torch</id>
+        <name>unlit torch</name>
+        <description>
+            <requires>pickedUpTorch</requires>
+            <text>A torch that you picked up. Maybe you can use something to light it?</text>
+        </description>
+        <description>
+            <text>There's a torch lying on the floor</text>
+        </description>
+        <use>
+            <what>item_lighter</what>
+            <result>
+                <set>torchLit</set>
+                <give>item_lit_torch</give>
+                <remove>item_unlit_torch</remove>
+                <description>
+                    <text>The torch starts to emit a warm, orange glow</text>
+                </description>
+            </result>
+        </use>
+        <pickUp>
+            <set>pickedUpTorch</set>
+            <description>
+                <text>You pick up the unlit torch</text>
+            </description>
+        </pickUp>
+        <damage>2</damage>
+    </item>
+
+    <item>
+        <id>item_lighter</id>
+        <name>lighter</name>
+        <description>
+            <requires>pickedUpLighter</requires>
+            <text>A lighter that you picked up. Maybe there's something you can light with it?</text>
+        </description>
+        <description>
+            <text>There's a lighter lying on the floor</text>
+        </description>
+        <pickUp>
+            <set>pickedUpLighter</set>
+            <description>
+                <text>You pick up the lighter. It seems to be in working condition</text>
+            </description>
+        </pickUp>
+    </item>
+
+    <item>
+        <id>item_lit_torch</id>
+        <name>lit torch</name>
+        <description>
+            <text>A lit torch</text>
+        </description>
+        <damage>3</damage>
+    </item>
+
+    <item>
+        <id>item_max_hp_potion</id>
+        <name>max HP potion</name>
+        <description>
+            <text>A potion that will increase your health point limit if you drink it</text>
+        </description>
+        <interact>
+            <result>
+                <remove>item_max_hp_potion</remove>
+                <increaseMaxHP>8</increaseMaxHP>
+                <description>
+                    <text>You feel better than ever before</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+
+    <item>
+        <id>item_restore_hp_potion</id>
+        <name>health potion</name>
+        <description>
+            <text>A potion that will heal your wounds</text>
+        </description>
+        <interact>
+            <result>
+                <remove>item_restore_hp_potion</remove>
+                <increaseHealth>10</increaseHealth>
+                <description>
+                    <text>Your wounds instantly close up and you feel ready to keep fighting</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+
+    <item>
+        <id>item_mail_shirt</id>
+        <name>mail shirt</name>
+        <description>
+            <text>A shiny shirt made of countless rings woven together</text>
+        </description>
+        <defence>2</defence>
+    </item>
+
+    <item>
+        <id>item_goblin_head</id>
+        <name>goblin head</name>
+        <description>
+            <text>Head of a goblin. Quite gruesome</text>
+        </description>
+    </item>
+
+    <object>
+        <id>object_fireplace</id>
+        <name>fireplace</name>
+        <description>
+            <requires>roomOnFire</requires>
+            <text>A very much lit fireplace</text>
+        </description>
+        <description>
+            <text>There's a nice little fireplace full of fuel in the corner</text>
+        </description>
+        <use>
+            <requires>not roomOnFire</requires>
+            <what>item_lit_torch</what>
+            <result>
+                <set>roomOnFire</set>
+                <description>
+                    <text>Now you've done it! The entire room somehow bursts into flame! At least the stone door to the north suddenly opened</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>not roomOnFire</requires>
+            <what>item_lighter</what>
+            <result>
+                <description>
+                    <text>The flame of the lighter is not enough to light the fireplace</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>not roomOnFire</requires>
+            <what>item_unlit_torch</what>
+            <result>
+                <description>
+                    <text>What are you, dumb?</text>
+                </description>
+            </result>
+        </use>
+        <interact>
+            <requires>not roomOnFire</requires>
+            <result>
+                <description>
+                    <text>Try as you might, you can't light it without a proper tool</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+
+    <object>
+        <id>object_stone_door</id>
+        <name>stone door</name>
+        <description>
+            <requires>roomOnFire</requires>
+            <text>The door is now open</text>
+        </description>
+        <description>
+            <text>There's a stone door in the northern wall of the room</text>
+        </description>
+        <use>
+            <requires>not roomOnFire</requires>
+            <what>item_lit_torch</what>
+            <result>
+                <description>
+                    <text>No, that's not it. The lit torch doesn't affect the door in any way</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>not roomOnFire</requires>
+            <what>item_unlit_torch</what>
+            <result>
+                <description>
+                    <text>You tap the torch on the closed stone door. Unsurprisingly, nothing happens</text>
+                </description>
+            </result>
+        </use>
+        <interact>
+            <requires>not roomOnFire</requires>
+            <result>
+                <description>
+                    <text>Nope, it just won't budge</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+
+    <character>
+        <id>character_angry_man</id>
+        <name>angry man</name>
+        <description>
+            <requires>questReceived</requires>
+            <text>The man is slightly less angry now. He told you to kill the goblin in the room to the west</text>
+        </description>
+        <description>
+            <text>There's a very angry man standing in the middle of the room. Probably because of the room that you set on fire</text>
+        </description>
+        <interact>
+            <requires>questReceived</requires>
+            <result>
+                <description>
+                    <text>What are you waiting for? Go kill that goblin</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>questReceived</set>
+                <give>quest_kill_goblin</give>
+                <give>item_max_hp_potion</give>
+                <give>item_restore_hp_potion</give>
+                <give>item_mail_shirt</give>
+                <description>
+                    <text>What the hell did you just do?! Anyway, I don't have any explanation for why you're here, but I do have a quest for you: go kill that goblin (he motions to the west), he's been bothering me lately. Here you go, some stuff that should help you. The torch you have should suffice as a weapon</text>
+                </description>
+            </result>
+        </interact>
+    </character>
+
+    <quest>
+        <id>quest_kill_goblin</id>
+        <name>kill the goblin</name>
+        <description>
+            <text>The angry man told you to kill a goblin in the room to the west of where he is and gave you some equipment to help with the task</text>
+        </description>
+        <completion>
+            <requires>goblinKilled</requires>
+            <result>
+                <set>questComplete</set>
+                <increaseMaxHP>2</increaseMaxHP>
+                <increaseBaseDamage>1</increaseBaseDamage>
+                <description>
+                    <text>Quest complete! MaxHP +2 BaseDamage +1</text>
+                </description>
+            </result>
+        </completion>
+    </quest>
+
+    <monster>
+        <id>monster_goblin</id>
+        <name>goblin</name>
+        <description>
+            <requires>goblinKilled</requires>
+            <text>There's a headless body of the goblin you killed lying on the floor</text>
+        </description>
+        <description>
+            <text>There's a pretty scary goblin standing there, but it seems like he hasn't noticed you yet</text>
+        </description>
+        <health>10</health>
+        <damage>4</damage>
+        <defence>1</defence>
+        <kill>
+            <result>
+                <set>goblinKilled</set>
+                <give>item_goblin_head</give>
+                <description>
+                    <text>The goblin falls dead. You cut off its head as undeniable proof that you completed your task</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+</game>

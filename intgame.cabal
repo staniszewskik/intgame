@@ -1,0 +1,26 @@
+name:                intgame
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/intgame#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2019 Author name here
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable intgame
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5, parsec, unix
+  other-modules:       GameDefinitions, CommonParsers, GameDataParsers,
+    PlayerDataParsers, GameActionParsers, RoomParsers, ResultParsers,
+    MiscStrings, PrintDescribeThings, CheckContainThings,
+    FilterFindThings, ExecuteResult, Helpers, HandleSaveLoad,
+    HandleLooks, HandleMoves, HandleUseInteract, HandlePickUpEquip,
+    HandleAttack

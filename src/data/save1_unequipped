@@ -1,0 +1,25 @@
+<player>
+    <position>1,0</position>
+    <inventory>
+        <id>item_lighter</id>
+        <id>item_lit_torch</id>
+    </inventory>
+    <health>10</health>
+    <maxHP>10</maxHP>
+    <baseDamage>1</baseDamage>
+    <baseDefence>1</baseDefence>
+    <pickedUp>
+        <id>item_lighter</id>
+        <id>item_unlit_torch</id>
+    </pickedUp>
+    <questlog>
+    </questlog>
+    <setFlags>
+        <id>torchLit</id>
+        <id>torchLit</id>
+        <id>pickedUpLighter</id>
+        <id>pickedUpLighter</id>
+        <id>pickedUpTorch</id>
+        <id>pickedUpTorch</id>
+    </setFlags>
+</player>
