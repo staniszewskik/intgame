@@ -39,7 +39,7 @@ findResFlgs flgs [] = flgs
 findResFlgs flgs (f:fs) =
   if setFlagsContainFlag f flgs
     then findResFlgs flgs fs
-    else (f:(findResFlgs (f:flgs) fs))
+    else findResFlgs (f:flgs) fs
 
 executeResult :: Game -> Result -> Game
 executeResult game@(Game gameData@(GameData _ _ wincdn

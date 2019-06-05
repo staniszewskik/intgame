@@ -16,10 +16,7 @@
     </questlog>
     <setFlags>
         <id>torchLit</id>
-        <id>torchLit</id>
         <id>pickedUpLighter</id>
-        <id>pickedUpLighter</id>
-        <id>pickedUpTorch</id>
         <id>pickedUpTorch</id>
     </setFlags>
 </player>
