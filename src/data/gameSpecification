@@ -1,0 +1,267 @@
+<game> // the game file is a single text file with a single <game> tag inside of it
+       // (btw. this file will not work as a game file, the parser doesn't expect comments)
+    <startPos>1,0</startPos> // inside this tag you first specify a position that the player will start at if not loading a save
+    <description> // as well as a description that is printed if the player doesn't load a save
+        <text>This is a start description</text>
+    </description>
+    <winCondition> // You also have a win condition - upon passing the requirements the description inside is printed and the game ends
+        <requires>winFlag</requires>
+        <description>
+            <text>Good job! You won the game</text>
+        </description>
+    </winCondition>
+
+    // after those elements come <room>, <item>, <object>, <character>, <quest> and <monster> tags, in that order 
+    
+    <room>
+        <position>1,0</position> // rooms have an X and a Y position, moving north from a room increases the player's Y position by one,
+                                 // moving east increases the X position, and moving south or west decreases the corresponding coordinate by one
+        <description> // rooms can have any number of <description> tags, and the one that will be printed when the player issues a "look around"
+                      // command is the first one from the top that has its requirements satisfied (if no such description is found, then nothing is printed)
+            <requires>flag1, not flag2, not flag3, flag4</requires> // requirements are a comma-separated list of flag names, optionally negated with the "not" word;
+                                                                    // all specified flags must be set (or unset if the flag name is preceded by the "not" word)
+                                                                    // for the requirement to be passed
+            <text>Just a regular room on fire</text>
+        </description>
+        <description> // a description with no <requires> tag will always pass, put it at the end for a default description
+            <text>This is a default description.
+Descriptions can be
+    mul
+       til
+          ine</text>
+        </description>
+        
+        // inside a room you can have any number of <itemRef>, <objectRef>, <characterRef> and <monsterRef> tags, in that order
+        
+        <itemRef>item_example_use_target</itemRef> // an item reference must begin with "item_"
+        <itemRef>item_example_use_what</itemRef>
+        <objectRef>object_example</objectRef> // an object reference must begin with "object_"
+        <characterRef>character_example</characterRef> // a character reference must begin with "character_"
+        <monsterRef>monster_example</monsterRef> // a monster reference must begin with "monster_"
+        
+        // after the references come <goNorth>, <goEast>, <goSouth>, <goWest>, <north>, <east>, <south> and <west> tags,
+        // in that order, but not all are necessary - you can have 0 or 1 of each of the tags
+        
+        <goNorth>
+            <requires>moveRequirements</requires> // requirements for a <goDirection> tag are optional
+            <description> // if there are no requirements or they are passed then the description is printed, and the player's position is changed
+                <text>You move north</text>
+            </description>
+        </goNorth>
+        
+        <north> // each <direction> tag contains at least one description, of which the first applicable
+                // is printed when the player issues a "look direction" command
+            <description>
+                <requires>lookNorthRequirement</requires>
+                <text>Look north description with a requirement</text>
+            </description>
+            <description>
+                <text>Default look north description</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <requires>not flag1, not flag2</requires>
+                <text>Describes south if neither of the two flags is set</text>
+            </description>
+        </south>
+    </room>
+
+    <item>
+        // every item, object, character, quest, monster has an id (reference) and a name
+        // ids can't contain spaces, names are used by the player to issue commands
+        <id>item_example_use_target</id>
+        <name>target item</name>
+        
+        <description>
+            <requires>pickedUpFlag</requires>
+            <text>Item description after picking it up</text>
+        </description>
+        <description>
+            <text>Initial item description</text>
+        </description>
+        
+        // an item can have any number of <use> tags
+        
+        <use>
+            <requires>useFlag</requires> // optional requirements 
+            <what>item_example_use_what</what> // reference to an item
+            
+            // the player would have to have useFlag set and issue the "use what item on target item"
+            // to execute the following result
+            
+            <result>
+                // results can set any number of flags,
+                <set>resultFlag</set>
+                // give any number of items or quests,
+                <give>item_example_use_transformed</give>
+                <give>quest_example</give>
+                // remove any number of items (transform one item into another, for example)
+                <remove>item_example_use_target</remove>
+                
+                // optionally it can also increase the player's stats
+                <increaseHealth>10</increaseHealth> // as a result of drinking a healing potion, for example
+                <increaseMaxHP>8</increaseMaxHP>
+                <increaseBaseDamage>1</increaseBaseDamage> // as a reward for completing a quest, for example
+                <increaseBaseDefence>1</increaseBaseDefence>
+                <description>
+                    <text>Use with a requirement</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <what>item_example_use_what</what>
+            <result>
+                <description>
+                    <text>Default use (could describe failure, for example)</text>
+                </description>
+            </result>
+        </use>
+        
+        <pickUp> // an item can optionally have a <pickUp> tag that sets the specified flags,
+                 // prints a description, gives the item to the player and marks it as picked up
+                 // (so its description isn't printed when the player looks around in the room
+                 // it was originally in)
+            <set>pickedUpFlag</set> // setting flags can be used for changing the description after an item is picked up
+            <description>
+                <text>You pick up the item</text>
+            </description>
+        </pickUp>
+        
+        // an item can have any number of <interact> tags
+        
+        <interact>
+            <requires>not interactFlag</requires>
+            <result>
+                <description>
+                    <text>Description printed after "interact with target item" if interactFlag is not set</text>
+                </description>
+            </result>
+        </interact>
+        
+        <damage>2</damage> // at the end of an item you can optionally have either a <damage> or <defence>,
+                           // that signifies the item to be equippable as a weapon or as armor respectively,
+                           // and how much damage or defence it adds
+    </item>
+
+    <item>
+        <id>item_example_use_what</id>
+        <name>what item</name>
+        <description>
+            <text>Default description</text>
+        </description>
+        <pickUp>
+            <description>
+                <text>Pick up description</text>
+            </description>
+        </pickUp>
+        <defence>1</defence>
+    </item>
+
+    <item>
+        <id>item_example_use_transformed</id>
+        <name>minimal item</name>
+    </item>
+
+    <object> // objects are very similar to items, but they can't be picked up
+        <id>object_example</id>
+        <name>example object</name>
+        <description>
+            <text>Default object description</text>
+        </description>
+        <use>
+            <requires>not objectFlag</requires>
+            <what>item_example_use_what</what>
+            <result>
+                <description>
+                    <text>Used example item on example object</text>
+                </description>
+            </result>
+        </use>
+        <interact>
+            <requires>not objectFlag</requires>
+            <result>
+                <description>
+                    <text>Interacted with example object</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+
+    <character> // characters are very similar to objects, but you can't use items on them
+        <id>character_example</id>
+        <name>example character</name>
+        <description>
+            <requires>talkedFlag</requires>
+            <text>Description after talking</text>
+        </description>
+        <description>
+            <text>Initial description</text>
+        </description>
+        <interact>
+            <requires>talkedFlag</requires>
+            <result>
+                <description>
+                    <text>Second speech</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>talkedFlag</set>
+                <description>
+                    <text>Initial speech</text>
+                </description>
+            </result>
+        </interact>
+    </character>
+
+    <quest>
+        <id>quest_example</id>
+        <name>example quest</name>
+        <description>
+            <requires>talkedFlag</requires>
+            <text>Description of next stage of the quest</text>
+        </description>
+        <description>
+            <text>Initial description when player issues the command "questlog example quest"</text>
+        </description>
+        <completion> // after each player command that can set some flags quests and win condition are checked for completion
+                     // if a quest passes completion requirements it's removed from the questlog and the result is executed
+            <requires>monsterKilled</requires>
+            <result>
+                <set>questComplete</set>
+                <increaseBaseDefence>1</increaseBaseDefence>
+                <description>
+                    <text>Quest complete! BaseDefence increased by one</text>
+                </description>
+            </result>
+        </completion>
+    </quest>
+
+    <monster> // there can be multiple monsters inside a single room, but after attacking one of them (command "attack example monster"),
+              // you can't go in a direction, save, load or change targets, and picking up items, using items on each other or interacting with them
+              // (drinking a healing potion, for example) will cause the enemy to attack you
+        <id>monster_example</id>
+        <name>example monster</name>
+        <description>
+            <requires>monsterKilled</requires>
+            <text>Description of whatever is left of the enemy after defeating them</text>
+        </description>
+        <description>
+            <text>Initial description of the enemy</text>
+        </description>
+        <health>10</health> // the initial health of a monster
+        <damage>4</damage>
+        <defence>1</defence>
+        <kill> // after each attack the monster's health is checked, if it reaches zero
+               // then the result inside this tag is executed
+            <result>
+                <set>monsterKilled</set>
+                <description>
+                    <text>You kill the monster</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+</game>

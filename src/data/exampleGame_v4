@@ -1,0 +1,3108 @@
+<game>
+    <startPos>100,100</startPos>
+    <description>
+<text>At last, the time has come to assault the Sixth House.
+  You are inside the western half of the Ghostgate, the tower of Dusk.
+  If this is your first time playing, or you need a refresher on the controls,
+  please type "pick up manual".</text>
+    </description>
+    <winCondition>
+        <requires>gameComplete</requires>
+        <description>
+<text>After the final strike a sudden silence falls upon the chamber.
+  Silence soon followed by the screams of Dagoth Ur as his power wanes
+  and his body falls apart, together with Akulakhan, his creation.
+  You escape from his lair to see that the sky is already clearing
+  and a bright sun is shining on the ash-covered landscape.
+  Prophecy fulfilled, Corprus stopped, Sixth House destroyed,
+  your mission may not be over yet, but for now you can rest.</text>
+        </description>
+    </winCondition>
+    
+    <room>
+        <position>100,100</position>
+        <description>
+            <requires>craftedStrengthPotion,firstHealerTalk</requires>
+            <text>This is the tower of Dusk.</text>
+        </description>
+        <description>
+<text>You are in the tower of Dusk. To the east is the tower of Dawn.
+  Make sure to prepare well before venturing further north, for the ash storms
+  around the Red Mountain hide many dangers, physical and magical alike.</text>
+        </description>
+        <itemRef>item_manual</itemRef>
+        <characterRef>character_dunmer</characterRef>
+        <goNorth>
+            <requires>craftedStrengthPotion,firstHealerTalk</requires>
+            <description>
+                <text>You leave the tower of Dusk and enter the domain of your enemy.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You go to the tower of Dawn</text>
+            </description>
+        </goEast>
+        <north>
+            <description>
+                <requires>craftedStrengthPotion,firstHealerTalk</requires>
+                <text>The exit leading towards the Red Mountain is that way.</text>
+            </description>
+            <description>
+<text>A passage there leads out of the Ghostgate and towards the Red Mountain.
+  You should prepare more before going that way.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>The tower of Dawn is that way.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>You cannot turn around now. Dagoth Ur must be stopped.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>101,100</position>
+        <description>
+            <text>This is the tower of Dawn.</text>
+        </description>
+        <objectRef>object_alchemy_station</objectRef>
+        <characterRef>character_healer</characterRef>
+        <goWest>
+            <description>
+                <text>You go to the tower of Dusk.</text>
+            </description>
+        </goWest>
+        <west>
+            <description>
+                <text>The tower of Dusk is that way.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>100,101</position>
+        <description>
+            <text>You stand outside the Ghostgate. A narrow path leads further north.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You follow the trail until you reach a fork.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You go back to the tower of Dusk.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <text>There's nothing special about this path, except that it is the only way forward.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+<text>The Ghostgate is right behind you, but the ash storms on the inside
+  of the Ghostfence are so intense that already you can barely make out
+  the tops of the towers, hidden by the gray-red dust suspended in the air.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>100,102</position>
+        <description>
+<text>The path you walked to get here from the Ghostgate splits into three.
+  The middle one is the widest and leads north, while two smaller ones
+  disappear in the ash storm to the east and west.</text>
+        </description>
+        <objectRef>object_body_cliff_racer</objectRef>
+        <monsterRef>monster_cliff_racer</monsterRef>
+        <goNorth>
+            <requires>obtainedKeening,obtainedSunder,obtainedWraithguard</requires>
+            <description>
+                <text>With all the tools gathered, you follow the path leading to Citadel Dagoth.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You follow the eastern path.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You go back towards the Ghostgate.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <requires>killedCliffRacer</requires>
+            <description>
+                <text>You follow the western path.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <requires>obtainedKeening,obtainedSunder,obtainedWraithguard</requires>
+                <text>You are now ready to follow this path</text>
+            </description>
+            <description>
+<text>This path must lead towards the lair of Dagoth Ur.
+  Best not approach without the tools of Kagrenac.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+<text>This path, as well as the western one probably leads to Citadels
+  of the most powerful servants of Dagoth Ur</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>This path leads back to the Ghostgate.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <requires>killedCliffRacer</requires>
+<text>This path, as well as the eastern one probably leads to Citadels
+  of the most powerful servants of Dagoth Ur</text>
+            </description>
+            <description>
+<text>This path probably leads to other Citadels. At the moment, however,
+  it is blocked by a cliff racer pecking at the ground.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>100,103</position>
+        <description>
+<text>You stand outside Citadel Dagoth. The entrance is to the north,
+  while to the west there is a large drop. You'd better not trip.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You enter the Citadel.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You head back to prepare a bit more.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <text>The entrance to Citadel Dagoth is a round metal door.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <text>There's no harm in going back and preparing a little longer.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+<text>You peek over the edge and see a very deep pit.
+  There is lava at the bottom.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>100,104</position>
+        <description>
+<text>You have entered Citadel Dagoth. There are rooms both
+  to the east and west, and the corridor you stand in extends north.</text>
+        </description>
+        <goNorth>
+            <requires>drankFireResistancePotion</requires>
+            <description>
+<text>You only feel the slightest hint of warmth
+  from the lava flowing underneath you as you walk north.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You enter the room to the east.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You exit the Citadel.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <description>
+                <text>You enter the room to the west.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <requires>drankFireResistancePotion</requires>
+<text>Now that you have drank the fire resistance potion,
+  you should be able to walk with no issues on that
+  metal grating under which there is lava flowing.</text>
+            </description>
+            <description>
+<text>The floor in the northern part of the corridor is replaced
+  by a metal grate. You can see lava glow bright orange
+  as it flows underneath. It's too hot for you to go there.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>Just a regular metal door.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>You see the door through which you entered.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <text>There's nothing out of the ordinary about this door.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>101,104</position>
+        <description>
+            <text>This room is mostly empty.</text>
+        </description>
+        <objectRef>object_dagoth_chest</objectRef>
+        <goWest>
+            <description>
+                <text>You go back to the corridor.</text>
+            </description>
+        </goWest>
+        <west>
+            <description>
+<text>You left the door open. This place isn't
+  as dangerous as you expected it to be.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>99,104</position>
+        <description>
+            <text>A regular room, like you would find in any dwarven ruin.</text>
+        </description>
+        <monsterRef>monster_ash_ghoul</monsterRef>
+        <goEast>
+            <description>
+                <text>You exit the room.</text>
+            </description>
+        </goEast>
+        <east>
+            <description>
+                <text>The door appears completely normal from this side as well.</text>
+            </description>
+        </east>
+    </room>
+    
+    <room>
+        <position>100,105</position>
+        <description>
+<text>You stand on a metal grate. There is lava flowing underneath,
+  but thanks to drinking a fire resistance potion you remain unharmed.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You go through the door and enter a giant chamber.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You go back to the entrance.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <text>There is a door in this direction.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <text>The exit is back this way.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>100,106</position>
+        <description>
+            <text>You stand at the entrance to an impressively spacious room.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You go north.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You go east.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You go back through the door.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <description>
+                <text>You go west.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <text>To the north you can see the door to Dagoth Ur's chamber.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>You see some junk scattered around in this corner of the room.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>The exit is back this way.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <text>There doesn't seem to be much in this corner.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>99,106</position>
+        <description>
+<text>You stand in the southwestern corner of the chamber.
+  It's surprisingly clean here.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You go north.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You go east.</text>
+            </description>
+        </goEast>
+        <north>
+            <description>
+                <requires>killedAscendedSleeper</requires>
+                <text>That corner of the room is where you killed the ascended sleeper.</text>
+            </description>
+            <description>
+                <text>You can see some monster to the north.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+<text>You see the door that you came through in the middle
+  of the southern wall of the chamber.</text>
+            </description>
+        </east>
+    </room>
+    
+    <room>
+        <position>101,106</position>
+        <description>
+<text>You stand in the southeastern corner of the room.
+  There is a lot of broken furniture here.</text>
+        </description>
+        <objectRef>object_dagoth_barrel</objectRef>
+        <goNorth>
+            <description>
+                <text>You go north.</text>
+            </description>
+        </goNorth>
+        <goWest>
+            <description>
+                <text>You go west.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <text>You can see a table in this direction.</text>
+            </description>
+        </north>
+        <west>
+            <description>
+<text>You see the door that you came through in the middle
+  of the southern wall of the chamber.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>100,107</position>
+        <description>
+            <text>You stand in the northern part of the chamber.</text>
+        </description>
+        <objectRef>object_dagoth_door</objectRef>
+        <goNorth>
+            <requires>unlockedDagothDoor</requires>
+            <description>
+<text>You open the door, walk through, and see
+  Dagoth Ur himself standing before you.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You go east.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You go south.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <description>
+                <text>You go west.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <requires>unlockedDagothDoor</requires>
+                <text>The path to Dagoth Ur is now open.</text>
+            </description>
+            <description>
+<text>The path forward is locked. You can feel
+  an evil presence from behind the door.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>You can see a table in this direction.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>You see the door that you came through in this direction.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <requires>killedAscendedSleeper</requires>
+                <text>That corner of the room is where you killed the ascended sleeper.</text>
+            </description>
+            <description>
+                <text>You can see some monster to the west.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>99,107</position>
+        <description>
+<text>You stand in the northwestern corner of the chamber.
+  The only thing of note here is the monster.</text>
+        </description>
+        <monsterRef>monster_ascended_sleeper</monsterRef>
+        <goEast>
+            <description>
+                <text>You go east.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You go south.</text>
+            </description>
+        </goSouth>
+        <east>
+            <description>
+<text>In the middle of the northern wall you can see
+  a door that will lead you to Dagoth Ur.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>There doesn't seem to be much in this corner.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>101,107</position>
+        <description>
+<text>You stand in the northeastern corner of the chamber.
+  There is not much here.</text>
+        </description>
+        <itemRef>item_dagoth_hp_potion_small</itemRef>
+        <goSouth>
+            <description>
+                <text>You go south.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <description>
+                <text>You go west.</text>
+            </description>
+        </goWest>
+        <south>
+            <description>
+                <text>You see some junk scattered around in this corner of the room.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+<text>In the middle of the northern wall you can see
+  a door that will lead you to Dagoth Ur.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>100,108</position>
+        <description>
+            <text>You are in a small cave.</text>
+        </description>
+        <monsterRef>monster_dagoth_ur_fake</monsterRef>
+        <goNorth>
+            <requires>killedDagothUrFake</requires>
+            <description>
+<text>Now that you've dealt with the fake, you go through the door
+  to the north and enter an absolutely enormous cavern.</text>
+            </description>
+        </goNorth>
+        <north>
+            <description>
+                <text>This door must lead to the Heart Chamber.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <text>You cannot turn back now.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>100,109</position>
+        <description>
+            <requires>heartSunderStrike</requires>
+            <text>You came back to the platform to fight Dagoth Ur once again.</text>
+        </description>
+        <description>
+<text>You stand by the door leading back to the cave
+  where you fought the fake. The cavern you are in now,
+  however, is absolutely gigantic. Looking over the edge
+  of the platform you are standing on, you see
+  an ocean of lava far, far below.</text>
+        </description>
+        <monsterRef>monster_dagoth_ur_real</monsterRef>
+        <monsterRef>monster_dagoth_ur_final</monsterRef>
+        <goNorth>
+            <description>
+                <text>You head towards the Heart of Lorkhan</text>
+            </description>
+        </goNorth>
+        <north>
+            <description>
+<text>To the north you see a giant robot under construction.
+  This must be Akulakhan, the creation of Dagoth Ur.
+  There is a walkway leading towards a red glow
+  in the middle of its chest, which you identify
+  as the Heart of Lorkhan.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+<text>After entering this chamber the door closed
+  behind you, and it is now covered in a shimmering
+  magical barrier, preventing you from leaving.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>100,110</position>
+        <description>
+            <text>You stand in front of the Heart of Lorkhan.</text>
+        </description>
+        <objectRef>object_heart_of_lorkhan</objectRef>
+        <goSouth>
+            <description>
+                <text>You head back to the platform.</text>
+            </description>
+        </goSouth>
+        <south>
+            <description>
+                <requires>killedDagothUrFinal</requires>
+                <text>The platform is back this way</text>
+            </description>
+            <description>
+                <requires>heartKeeningStrikeThird</requires>
+<text>Dagoth Ur stood up and started to shower you with
+  spells again, as if nothing happened to him.
+  You must defeat him once more and then finish this.</text>
+            </description>
+            <description>
+                <requires>killedDagothUrReal</requires>
+                <text>The platform is back this way</text>
+            </description>
+            <description>
+                <requires>heartSunderStrike</requires>
+<text>Dagoth Ur appeared on the platform.
+  You must defeat him again before continuing
+  to strike the Heart of Lorkhan.</text>
+            </description>
+            <description>
+                <text>The platform is back this way</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>101,102</position>
+        <description>
+            <text>There are paths leading east and west, and not much besides that.</text>
+        </description>
+        <objectRef>object_dagger_rock</objectRef>
+        <goEast>
+            <description>
+                <text>You go further east.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You go back to the crossroads.</text>
+            </description>
+        </goWest>
+        <east>
+            <description>
+                <requires>killedAshZombie</requires>
+                <text>This path will eventually lead you to Citadels Tureynulal and Odrosal.</text>
+            </description>
+            <description>
+                <text>Through the storms you can make out a creature walking around.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <text>This path leads back to the crossroads.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>102,102</position>
+        <description>
+            <requires>killedAshZombie</requires>
+<text>The path continues east and west.
+  This is where you fought an ash zombie.</text>
+        </description>
+        <description>
+<text>The path continues east and west.
+  You stopped because you came upon an ash zombie.</text>
+        </description>
+        <monsterRef>monster_ash_zombie</monsterRef>
+        <goEast>
+            <description>
+                <text>You continue east and arrive at the door of Tureynulal.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You follow the path west.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+<text>When the ash clears for a moment you can see
+  countless dwemer towers. That must be Citadel Dagoth.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+<text>This path leads to Tureynulal.
+  Further ahead you should also find Citadel Odrosal.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <text>The crossroads are back this way.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>103,102</position>
+        <description>
+            <text>You stand outside Citadel Tureynulal.</text>
+        </description>
+        <objectRef>object_dwarven_crank</objectRef>
+        <goNorth>
+            <requires>dwarvenCrankPulled</requires>
+            <description>
+                <text>You enter Tureynulal through the now open door.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You continue east.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You head back towards the crossroads.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <requires>dwarvenCrankPulled</requires>
+                <text>The door is now open.</text>
+            </description>
+            <description>
+<text>The door to Tureynulal is closed,
+  and you can't see any keyhole in it. There must be some
+  dwemer mechanism around here that opens it.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>Citadel Odrosal must be that way.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <text>The crossroads are that way.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>103,103</position>
+        <description>
+<text>You stand at the beginning of a lengthy corridor.
+  To the north you can see a few lights attached to the walls.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You go north until you see a door in the wall to the east.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You exit Tureynulal.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <requires>killedTureynul</requires>
+                <text>Tureynul is dead. It is now almost completely quiet inside the Citadel.</text>
+            </description>
+            <description>
+<text>At first you think it's just the repetitive noise
+  of some ancient machinery, but then you realise you can
+  just barely hear a voice in the distance.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <text>The exit from Tureynulal is to the south.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>103,104</position>
+        <description>
+            <requires>killedTureynul</requires>
+<text>A lamp on the wall to the west flickers loudly,
+  but except for that, you hear nothing.
+  There is a door to your east.</text>
+        </description>
+        <description>
+<text>Lengthwise, you stand in the middle of the corridor.
+  There is a door in the wall to the east.
+  You can hear a monotone voice to the north,
+  but you can't make out the words.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You reach the end of the corridor</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You enter the room.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You follow the corridor south.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <text>You can see the end of the corridor in this direction.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>There is a room to the east. The door seems to be unlocked.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>This corridor will lead you back to the exit.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>104,104</position>
+        <description>
+<text>The room is filled with junk.
+  A table stands in the middle.</text>
+        </description>
+        <itemRef>item_puzzle_box_book</itemRef>
+        <goWest>
+            <description>
+                <text>You go back to the corridor.</text>
+            </description>
+        </goWest>
+        <west>
+            <description>
+<text>There is a rust-covered door in the doorway of this room.
+  The hinges screeched horribly when you entered.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>103,105</position>
+        <description>
+<text>You stand at the end of the corridor.
+  There is another door to the east.</text>
+        </description>
+        <goEast>
+            <description>
+                <text>You open the door and enter.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You head towards the exit.</text>
+            </description>
+        </goSouth>
+        <east>
+            <description>
+                <requires>killedTureynul</requires>
+                <text>The room is now silent.</text>
+            </description>
+            <description>
+<text>You can hear a chant from inside this room.
+  It must be Dagoth Tureynul.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <text>The corridor leads back to the exit.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>104,105</position>
+        <description>
+<text>You stand inside a room that has been
+  converted into a shrine for Dagoth Ur.</text>
+        </description>
+        <monsterRef>monster_tureynul</monsterRef>
+        <goWest>
+            <description>
+                <text>You exit the room.</text>
+            </description>
+        </goWest>
+        <west>
+            <description>
+                <text>The exit is this way.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>104,102</position>
+        <description>
+            <text>An unremarkable path.</text>
+        </description>
+        <goEast>
+            <description>
+                <text>You reach another fork in the path.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You head towards Tureynulal.</text>
+            </description>
+        </goWest>
+        <east>
+            <description>
+                <requires>killedFrostAtronach</requires>
+<text>You can see a fork in the path ahead. The way north
+  is where you found a cave with a frost atronach inside,
+  while to the south lies Odrosal.</text>
+            </description>
+            <description>
+<text>You can see a fork in the path ahead. One way must
+  lead to Odrosal, but what could be in the other direction?</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <text>This path leads back to Tureynulal.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>105,102</position>
+        <description>
+            <text>There are paths leading north, south and west here.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You open the wooden door and enter the cave.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <requires>equippedWraithguard</requires>
+            <description>
+<text>With Wraithguard protecting your hand,
+  you enter Citadel Odrosal.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <description>
+                <text>You go back towards Tureynulal.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+<text>You can see a cave in this direction. Its opening is shielded
+  from the weather outside by a rickety wooden door.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <requires>equippedWraithguard</requires>
+                <text>Citadel Odrosal is this way.</text>
+            </description>
+            <description>
+<text>Citadel Odrosal is this way.
+  You shouldn't enter without Wraithguard.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <text>This path leads back to Tureynulal, and the crossroads beyond.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>105,101</position>
+        <description>
+            <requires>pickedUpKeening</requires>
+<text>You stand in the doorway of Citadel Odrosal.
+  Rubble blocks the way south.</text>
+        </description>
+        <description>
+<text>You stand in the doorway of Citadel Odrosal.
+  A corridor goes south and then turns east.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You walk out of the Citadel.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <requires>not pickedUpKeening</requires>
+            <description>
+                <text>You follow the corridor south.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <text>The storms outside are relentless.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <requires>assembledKey</requires>
+<text>If you didn't leave the door to the secret passage open,
+  you would probably never find it again.
+  There's no reason to go back through there, however.</text>
+            </description>
+            <description>
+                <text>There's nothing there.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <requires>pickedUpKeening</requires>
+<text>The ceiling in this direction collapsed and completely
+  blocked the rest of the corridor.</text>
+            </description>
+            <description>
+                <text>Going this way should lead you to Keening.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>105,100</position>
+        <description>
+            <text>The corridor turns here from north to east.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You head back to the exit.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You approach a ladder.</text>
+            </description>
+        </goEast>
+        <north>
+            <description>
+                <text>That's where you entered Odrosal from.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+<text>You can see the end of the corridor
+  and a ladder attached to the northern wall</text>
+            </description>
+        </east>
+    </room>
+    
+    <room>
+        <position>106,100</position>
+        <description>
+<text>You stand by a ladder attached to the northern wall.
+  The corridor ends here.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You climb the ladder and finally see Keening.</text>
+            </description>
+        </goNorth>
+        <goWest>
+            <description>
+                <text>You go back to the bend in the corridor.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <text>A trapdoor hides the room accessible via the ladder.</text>
+            </description>
+        </north>
+        <west>
+            <description>
+                <text>That's where the corridor turns from east to north.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>106,101</position>
+        <description>
+            <text>There's barely anything in this room.</text>
+        </description>
+        <itemRef>item_keening</itemRef>
+        <monsterRef>monster_odros</monsterRef>
+        <goSouth>
+            <requires>not pickedUpKeening</requires>
+            <description>
+                <text>You climb back down the ladder.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <requires>assembledKey</requires>
+            <description>
+<text>You put the key in the keyhole in the middle of the wall.
+  You turn it, and a perfectly hidden door cracks open.
+  You squeeze into the passage behind it and after a moment
+  arrive back at the exit from Odrosal.</text>
+            </description>
+        </goWest>
+        <south>
+            <description>
+                <requires>pickedUpKeening</requires>
+<text>Only a few top rungs of the ladder are visible.
+  The rest of the ladder disappears into rubble.
+  You are definitely not getting out of Odrosal through here.</text>
+            </description>
+            <description>
+                <text>The ladder leads back down to the corridor.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <text>That's weird. There's a keyhole in the middle of the wall.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>105,103</position>
+        <description>
+<text>You stand near the exit from the cave.
+  The cave itself is quite spacious and extends to the east.</text>
+        </description>
+        <objectRef>object_conjurer_body</objectRef>
+        <goEast>
+            <description>
+                <text>You go deeper into the cave.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You exit the cave.</text>
+            </description>
+        </goSouth>
+        <east>
+            <description>
+                <requires>killedFrostAtronach</requires>
+                <text>That's where you found a frost atronach.</text>
+            </description>
+            <description>
+<text>An intense cold emanates from deeper inside the cave.
+  You see a frost atronach in the distance.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+<text>You see the wooden door through which you entered this cave.
+  The ash storms outside don't encourage you to exit.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>106,103</position>
+        <description>
+            <text>You are deep inside the cavern.</text>
+        </description>
+        <monsterRef>monster_frost_atronach</monsterRef>
+        <goWest>
+            <description>
+                <text>You head towards the cave exit.</text>
+            </description>
+        </goWest>
+        <west>
+            <description>
+                <text>The cave exit is that way. Nowhere else to go, really.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>99,102</position>
+        <description>
+            <text>Nothing special about this path.</text>
+        </description>
+        <goEast>
+            <description>
+                <text>You go back to the crossroads.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You continue along the path.</text>
+            </description>
+        </goWest>
+        <east>
+            <description>
+                <text>The crossroads are very close by.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <text>You should soon reach Endusal if you go this way.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>98,102</position>
+        <description>
+<text>Just a bit to the south is the entrance to Endusal.
+  The path you took from the crossroads also continues west.</text>
+        </description>
+        <goEast>
+            <description>
+                <text>You head east.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <requires>not killedEndus</requires>
+            <description>
+                <text>You enter the ruin where Dagoth Endus resides.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <description>
+                <text>You keep going west.</text>
+            </description>
+        </goWest>
+        <east>
+            <description>
+                <text>This path leads back to the crossroads.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+                <requires>killedEndus</requires>
+                <text>This Citadel is where Dagoth Endus dwelled. No reason to go back in.</text>
+            </description>
+            <description>
+<text>You see a dwemer ruin, one of many in this area.
+  This one, however, must be where one of the Ash Vampires
+  you were told to kill is located.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <text>If you go west you should eventually reach Citadel Vemynal.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>98,101</position>
+        <description>
+            <text>You stand in the antechamber of Citadel Endusal.</text>
+        </description>
+        <objectRef>object_endusal_table</objectRef>
+        <goNorth>
+            <description>
+                <text>You leave Citadel Endusal.</text>
+            </description>
+        </goNorth>
+        <goWest>
+            <description>
+                <text>You venture further into the Citadel.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <text>You left the heavy, metal door slightly open. Winds are howling outside.</text>
+            </description>
+        </north>
+        <west>
+            <description>
+                <text>Only a single lamp mounted on the wall lights the way forward.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>97,101</position>
+        <description>
+<text>A corridor goes south from here. You can see an empty
+  doorway leading to the antechamber to the east.</text>
+        </description>
+        <goEast>
+            <description>
+                <text>You go back to the antechamber.</text>
+            </description>
+        </goEast>
+        <goSouth>
+            <description>
+                <text>You follow the corridor south.</text>
+            </description>
+        </goSouth>
+        <east>
+            <description>
+                <text>The antechamber is back that way.</text>
+            </description>
+        </east>
+        <south>
+            <description>
+<text>You can see the end of the corridor in this direction.
+  Numerous pipes line the walls and ceiling.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>97,100</position>
+        <description>
+<text>You stand at the end of the corridor.
+  There is a door in the western wall.</text>
+        </description>
+        <goNorth>
+            <description>
+                <text>You head back north.</text>
+            </description>
+        </goNorth>
+        <goWest>
+            <requires>gotDwarvenHalberd</requires>
+            <description>
+<text>You enter the room and see Dagoth Endus,
+  engrossed in some dark ritual.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <text>A single light flickers in the distance.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+<text>There are many pipes attached to this wall, going up and down,
+  left and right, connecting, turning, crossing over each other.
+  You remember a piece of dwemer trivia Antabolis told you:
+  for whatever reason, the dwemer engraved the word "wormgod"
+  at regular intervals into all their pipes. Looking closer,
+  there are certainly some markings, but even if they were in a language
+  you knew, they faded with time too much to be readable.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <requires>gotDwarvenHalberd</requires>
+                <text>Behind this door you will certainly find Dagoth Endus.</text>
+            </description>
+            <description>
+                <requires>gotDwarvenHalberd</requires>
+<text>Make sure to find a proper weapon.
+  Dagoth Endus must be inside this room.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>96,100</position>
+        <description>
+            <text>You are inside the study of Dagoth Endus.</text>
+        </description>
+        <monsterRef>monster_endus</monsterRef>
+        <goEast>
+            <description>
+                <text>You exit the room.</text>
+            </description>
+        </goEast>
+        <east>
+            <description>
+                <requires>killedEndus</requires>
+                <text>The corridor is back this way.</text>
+            </description>
+            <description>
+<text>The door is this way. Dagoth Endus is not paying any attention to you,
+  so you could leave, if you don't think you are ready to fight him.</text>
+            </description>
+        </east>
+    </room>
+    
+    <room>
+        <position>97,102</position>
+        <description>
+<text>There isn't anything of note on this stretch of the path.
+  You should follow it either east or west.</text>
+        </description>
+        <goEast>
+            <description>
+                <text>You reach the entrance to Endusal.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You continue walking towards Citadel Vemynal.</text>
+            </description>
+        </goWest>
+        <east>
+            <description>
+                <text>Citadel Endusal isn't far this way.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <text>This path should eventually lead you to Vemynal.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>96,102</position>
+        <description>
+<text>The main path turns north here, most likely towards Citadel Vemynal,
+  while a smaller one branches off west.</text>
+        </description>
+        <goNorth>
+            <description>
+<text>You follow the path north, and arrive at Vemynal,
+  one of the Citadels that the Sixth House took for itself.</text>
+            </description>
+        </goNorth>
+        <goEast>
+            <description>
+                <text>You head back towards Endusal and the crossroads.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <description>
+                <text>You follow the narrow path.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <text>You see the characteristic spires of a dwarven ruin.</text>
+            </description>
+        </north>
+        <east>
+            <description>
+                <text>Endusal is quite a ways away in this direction.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+<text>The ash storms make this path hard to notice,
+  but it is definitely there.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>96,103</position>
+        <description>
+            <requires>obtainedSunder</requires>
+<text>You stand at the entrance to Vemynal. You already defeated
+  the Ash Vampire inside and took Sunder from him,
+  one of the tools of Kagrenac which you will need to defeat Dagoth Ur.</text>
+        </description>
+        <description>
+            <text>You stand at the entrance to Citadel Vemynal.</text>
+        </description>
+        <goNorth>
+            <requires>equippedWraithguard</requires>
+            <description>
+<text>With Wraithguard protecting your hand,
+  you enter Vemynal.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You head south.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <requires>equippedWraithguard</requires>
+                <text>The door to Vemynal is this way.</text>
+            </description>
+            <description>
+<text>The door to Vemynal is this way.
+  You shouldn't enter without Wraithguard.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+<text>This way leads back to where you noticed
+  a narrow path branching off of the main one.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>96,104</position>
+        <description>
+<text>You stand inside Vemynal. Far to the north
+  you see a door, and there's another one a bit closer
+  in the wall to the west.</text>
+        </description>
+        <goNorth>
+            <description>
+<text>You approach the door in the western
+  wall of the corridor.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You exit Vemynal.</text>
+            </description>
+        </goSouth>
+        <north>
+            <description>
+                <text>You can see two doors in this direction.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <text>The exit from Vemynal is this way.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>96,105</position>
+        <description>
+            <text>You stand near the western wall.</text>
+        </description>
+        <objectRef>object_vemynal_door</objectRef>
+        <goNorth>
+            <description>
+<text>You enter the room to the north, and see Dagoth Vemyn.
+ You ready yourself for battle.</text>
+            </description>
+        </goNorth>
+        <goSouth>
+            <description>
+                <text>You go back south.</text>
+            </description>
+        </goSouth>
+        <goWest>
+            <requires>unlockedVemynalDoor</requires>
+            <description>
+                <text>You enter the room through the now unlocked door.</text>
+            </description>
+        </goWest>
+        <north>
+            <description>
+                <requires>killedVemyn</requires>
+                <text>That room is where you found Vemyn and took Sunder from him.</text>
+            </description>
+            <description>
+                <text>Dagoth Vemyn must be in that room.</text>
+            </description>
+        </north>
+        <south>
+            <description>
+                <text>To the south is the exit from Citadel Vemynal.</text>
+            </description>
+        </south>
+        <west>
+            <description>
+                <requires>unlockedVemynalDoor</requires>
+                <text>You can now enter this room.</text>
+            </description>
+            <description>
+                <requires>killedVemyn</requires>
+<text>You found a key on Dagoth Vemyn.
+  It probably unlocks the door to this room.</text>
+            </description>
+            <description>
+<text>The metal door to this room is locked.
+  The key can't be far from here. Maybe Vemyn has it?</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>95,105</position>
+        <description>
+            <text>There's not much in this room.</text>
+        </description>
+        <itemRef>item_daedric_longsword</itemRef>
+        <goEast>
+            <description>
+                <text>You exit the room.</text>
+            </description>
+        </goEast>
+        <east>
+            <description>
+                <text>The door leading back outside is here.</text>
+            </description>
+        </east>
+    </room>
+    
+    <room>
+        <position>96,106</position>
+        <description>
+<text>There are bent pieces of metal scrap
+  and other pieces broken off of ancient machinery
+  scattered across the room.</text>
+        </description>
+        <monsterRef>monster_vemyn</monsterRef>
+        <goSouth>
+            <requires>killedVemyn</requires>
+            <description>
+                <text>You leave the chamber of Dagoth Vemyn.</text>
+            </description>
+        </goSouth>
+        <south>
+            <description>
+                <requires>killedVemyn</requires>
+<text>You have dispatched Dagoth Vemyn and retrieved Sunder.
+  You can leave the Citadel now.</text>
+            </description>
+            <description>
+                <text>You cannot leave before you take care of Vemyn.</text>
+            </description>
+        </south>
+    </room>
+    
+    <room>
+        <position>95,102</position>
+        <description>
+            <text>The narrow path continues west.</text>
+        </description>
+        <monsterRef>monster_corprus_stalker</monsterRef>
+        <goEast>
+            <description>
+                <text>You go back to the main path.</text>
+            </description>
+        </goEast>
+        <goWest>
+            <requires>killedCorprusStalker</requires>
+            <description>
+                <text>You continue down the narrow path</text>
+            </description>
+        </goWest>
+        <east>
+            <description>
+                <text>The main path is back this way.</text>
+            </description>
+        </east>
+        <west>
+            <description>
+                <requires>killedCorprusStalker</requires>
+                <text>The path is no longer blocked by the creature.</text>
+            </description>
+            <description>
+                <text>You cannot go further. A corprus stalker blocks the way.</text>
+            </description>
+        </west>
+    </room>
+    
+    <room>
+        <position>94,102</position>
+        <description>
+<text>You arrived at a dead end. The path is suddenly
+  cut short by rocks that must have fallen on it during
+  one of the eruptions of the Red Mountain.</text>
+        </description>
+        <objectRef>object_fire_fern</objectRef>
+        <goEast>
+            <description>
+                <text>You go back east.</text>
+            </description>
+        </goEast>
+        <east>
+            <description>
+                <text>There's nowhere else to go from here, except back.</text>
+            </description>
+        </east>
+    </room>
+    
+    <item>
+        <id>item_wraithguard</id>
+        <name>Wraithguard</name>
+        <description>
+<text>Upon closer inspection, there are intricate mechanisms visible
+  through joints in the gauntlet that are moving and spinning
+  even now, when no one is wearing it. They must be powered
+  by some combination of magic and technology.</text>
+        </description>
+        <interact>
+            <result>
+                <set>equippedWraithguard</set>
+                <remove>item_wraithguard</remove>
+                <increaseMaxHP>10</increaseMaxHP>
+                <increaseBaseDefence>1</increaseBaseDefence>
+                <description>
+<text>You put your hand inside Wraithguard, and the gauntlet
+  instantly adjusts to fit it comfortably, but securely.
+  It even seems to slightly cool your hand and keep it dry.</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+
+    <item>
+        <id>item_manual</id>
+        <name>manual</name>
+        <description>
+            <requires>pickedUpManual</requires>
+            <text>A manual. Interact with it to learn how to play the game</text>
+        </description>
+        <description>
+<text>There is a manual lying on a table.
+  Pick it up and read it to learn how to play the game.</text>
+        </description>
+        <pickUp>
+            <set>pickedUpManual</set>
+            <description>
+                <text>You pick up the manual. Now type "interact with manual" to read it.</text>
+            </description>
+        </pickUp>
+        <interact>
+            <result>
+                <description>
+<text>Here's the list of commands that you can type to play the game:
+  1. look around - describes the area you are currently in, as well as
+  all the items, objects, characters and monsters you can see
+  2. look at self - describes your health, equipped weapon and armor
+  and lists the items you have in your inventory
+  3. look at X - describes something that is in your inventory or in
+  the area you are currently in
+  4. look DIR - (where DIR is north, east, south, or west) describes
+  what you can see in the specified direction
+  5. go DIR - tries to move in the specified direction
+  6. equip X - equips an item from your inventory if it is either
+  a weapon or an armor
+  7. pick up X - picks up an item that you can see around you
+  8. interact with X - interacts with an item from your inventory,
+  an object in the area around you, or talks to a character
+  9. use X on Y - uses an item from your inventory on either another
+  item from your inventory, or an object in the area around you
+  10. attack X - attacks a monster in the area around you, but watch out,
+  this locks you into combat until one of you dies (you cannot save
+  or go in a direction during combat, looking actions are free,
+  but attacking, picking up items, interactions or using an item on something
+  allows the enemy to retaliate)
+  11. questlog list - lists all the ongoing quests
+  12. questlog X - describes the specified quest
+  13. save X - saves your progress under the specified file name
+  14. load X - loads your progress from the specified file
+  15. exit - exits the game (make sure to save your progress before using this one)
+  
+  By the way, this book is quite sturdy. For lack of a better weapon,
+  you can use it to bash an enemy over the head, so "equip manual" it,
+  if you can't find anything better.</text>
+                </description>
+            </result>
+        </interact>
+        <damage>1</damage>
+    </item>
+    
+    <item>
+        <id>item_dagoth_hp_potion_small</id>
+        <name>small health potion</name>
+        <description>
+            <requires>pickedUpSmallPotion</requires>
+            <text>A healing potion you found on a table.</text>
+        </description>
+        <description>
+            <text>There's a small health potion standing on a table.</text>
+        </description>
+        <pickUp>
+            <set>pickedUpSmallPotion</set>
+            <description>
+                <text>You pick up the potion.</text>
+            </description>
+        </pickUp>
+        <interact>
+            <result>
+                <remove>item_dagoth_hp_potion_small</remove>
+                <increaseHealth>5</increaseHealth>
+                <description>
+                    <text>Your wounds instantly close up and you feel ready to keep fighting</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_dagoth_hp_potion_strong</id>
+        <name>strong health potion</name>
+        <description>
+            <text>A healing potion you found in a chest.</text>
+        </description>
+        <interact>
+            <result>
+                <remove>item_dagoth_hp_potion_strong</remove>
+                <increaseHealth>15</increaseHealth>
+                <description>
+                    <text>Your wounds instantly close up and you feel ready to keep fighting</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_healer_hp_potion</id>
+        <name>health potion</name>
+        <description>
+            <text>A healing potion you got from the healer</text>
+        </description>
+        <interact>
+            <result>
+                <remove>item_healer_hp_potion</remove>
+                <increaseHealth>10</increaseHealth>
+                <description>
+                    <text>Your wounds instantly close up and you feel ready to keep fighting</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_ash_yam</id>
+        <name>ash yam</name>
+        <description>
+            <text>An ash yam.</text>
+        </description>
+        <interact>
+            <result>
+                <description>
+<text>Eating this would be a waste when I can make a useful potion
+  by combining it with the dreugh wax I've received.</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_dreugh_wax</id>
+        <name>dreugh wax</name>
+        <description>
+            <text>A little bowl containing some dreugh wax.</text>
+        </description>
+    </item>
+    
+    <item>
+        <id>item_strength_potion</id>
+        <name>strength potion</name>
+        <description>
+            <text>A surprisingly colorful liquid swirls around inside this bottle</text>
+        </description>
+        <interact>
+            <result>
+                <remove>item_strength_potion</remove>
+                <increaseBaseDamage>1</increaseBaseDamage>
+                <description>
+<text>The taste isn't pleasant, but you can already feel stronger.
+  Your attacks should now carry a bit more force.</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_fire_resistance_potion</id>
+        <name>fire resistance potion</name>
+        <description>
+            <text>The bottle is almost too cold to hold it with a bare hand.</text>
+        </description>
+        <interact>
+            <result>
+                <set>drankFireResistancePotion</set>
+                <remove>item_fire_resistance_potion</remove>
+                <description>
+                    <text>You quickly drink the potion</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_ebony_dagger</id>
+        <name>ebony dagger</name>
+        <description>
+<text>A beautiful dagger made from a black substance
+  that shines like gold when light bounces off of it.</text>
+        </description>
+        <interact>
+            <result>
+                <description>
+<text>Ouch! Despite being hidden under a rock,
+  the blade edge is in perfect condition.</text>
+                </description>
+            </result>
+        </interact>
+        <damage>2</damage>
+    </item>
+    
+    <item>
+        <id>item_dwarven_halberd</id>
+        <name>dwarven halberd</name>
+        <description>
+<text>A dwarven halberd you found inside Citadel Endusal.
+  Quite a formidable weapon, and its length allows you to dispatch
+  the hideous, corprus-ridden monsters from a safer distance.</text>
+        </description>
+        <damage>3</damage>
+    </item>
+    
+    <item>
+        <id>item_keening</id>
+        <name>Keening</name>
+        <description>
+            <requires>pickedUpKeening</requires>
+            <text>A dagger with an intricate metal handle,
+  and a blade made of a single light blue crystal.</text>
+        </description>
+        <description>
+            <text>You see Keening stuck in the ground</text>
+        </description>
+        <pickUp>
+            <set>pickedUpKeening</set>
+            <set>obtainedKeening</set>
+            <description>
+<text>You pull Keening out of the ground. You feel magic coursing
+  through the air and turn around to see Dagoth Odros!
+  He must have marked his recall point here and
+  waited for you to walk into his trap. After he notices you,
+  he sends a magical spark flying down the ladder, and before
+  you can reach him, you are thrown back by an explosion.
+  When you stand back up, you see him ready to attack you.</text>
+            </description>
+        </pickUp>
+        <damage>4</damage>
+    </item>
+    
+    <item>
+        <id>item_sunder</id>
+        <name>Sunder</name>
+        <description>
+<text>A quite hefty metal mallet. What dark magic
+  allowed Dagoth Vemyn to wield it without dying
+  you do not know, but with your hand protected
+  by Wraithguard it feels like any other hammer.</text>
+        </description>
+        <damage>4</damage>
+    </item>
+    
+    <item>
+        <id>item_daedric_longsword</id>
+        <name>daedric longsword</name>
+        <description>
+            <requires>pickedUpDaedricLongsword</requires>
+<text>A daedric longsword you found. A truly wicked weapon,
+  perhaps more dangerous to an inexperienced user than
+  the enemy they face. But you are far from inexperienced.</text>
+        </description>
+        <description>
+<text>There's a daedric longsword lying on the floor in the corner,
+  as if thrown there by someone who considered it trash.</text>
+        </description>
+        <pickUp>
+            <set>pickedUpDaedricLongsword</set>
+            <description>
+                <text>You pick up the longsword.</text>
+            </description>
+        </pickUp>
+        <damage>5</damage>
+    </item>
+    
+    <item>
+        <id>item_fire_petals</id>
+        <name>fire petals</name>
+        <description>
+<text>Fire petals that you plucked off the fire fern plant
+  that you found. They are useful for crafting a potion
+  that improves your resistance to high temperatures.</text>
+        </description>
+    </item>
+    
+    <item>
+        <id>item_frost_salts</id>
+        <name>frost salts</name>
+        <description>
+<text>A little bowl of frost salts that you harvested from
+  the body of an atronach you killed in the cave to the east.
+  Frost salts can be used to craft a potion that improves
+  your resistance to high temperatures.</text>
+        </description>
+        <interact>
+            <result>
+                <description>
+<text>They are too strong to use raw. You would just
+  get frostbite. You need to mix them with something else
+  at the alchemy station in the tower of Dawn.</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_dwemer_puzzle_box</id>
+        <name>dwemer puzzle box</name>
+        <description>
+            <requires>assembledKey</requires>
+            <text>The box transformed into a key.</text>
+        </description>
+        <description>
+            <requires>readPuzzleBoxBook</requires>
+            <text>This must be one of the boxes you read about in that book.</text>
+        </description>
+        <description>
+            <text>It's a metal cube. Why would Odros have this?</text>
+        </description>
+        <interact>
+            <requires>assembledKey</requires>
+            <result>
+                <description>
+                    <text>The key is already assembled.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <requires>readPuzzleBoxBook</requires>
+            <result>
+                <set>assembledKey</set>
+                <description>
+<text>It's not quite as easy as the book made it seem,
+  but you eventually assemble a key out of the box.
+  Now, where could you use it?</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <description>
+<text>You turn the box around in your hands.
+  You can't figure out what its purpose could be.</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_puzzle_box_book</id>
+        <name>book</name>
+        <description>
+            <requires>pickedUpBook</requires>
+            <text>A book talking about an interesting type of dwarven artifacts.</text>
+        </description>
+        <description>
+<text>A book lies open on a table, and there is a chair to the side.
+  Someone must have been reading it recently.</text>
+        </description>
+        <pickUp>
+            <set>pickedUpBook</set>
+            <description>
+                <text>You pick up the book.</text>
+            </description>
+        </pickUp>
+        <interact>
+            <requires>readPuzzleBoxBook</requires>
+            <result>
+                <description>
+<text>You skim through the book again,
+  but find nothing more of interest</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>readPuzzleBoxBook</set>
+                <description>
+<text>You read the book. It describes a number of similar artifacts
+  occasionally found in dwemer ruins. They look at first glance to be
+  simple metal cubes, easily fitting into your hands, but through
+  careful manipulation you can assemble a key out of them,
+  which usually opens a door not far from where they were found.</text>
+                </description>
+            </result>
+        </interact>
+    </item>
+    
+    <item>
+        <id>item_dagoth_vemyn_key</id>
+        <name>rough key</name>
+        <description>
+            <text>This key appears to be quite old and worn.</text>
+        </description>
+    </item>
+    
+    <item>
+        <id>item_ascended_sleeper_key</id>
+        <name>key</name>
+        <description>
+            <text>This key should let you into Dagoth Ur's sanctum.</text>
+        </description>
+    </item>
+    
+    <item>
+        <id>item_dwemer_armor</id>
+        <name>dwemer armor</name>
+        <description>
+<text>This set of armor is in quite a rough shape,
+  but it should protect you well enough.</text>
+        </description>
+        <defence>2</defence>
+    </item>
+    
+    <item>
+        <id>item_daedric_armor</id>
+        <name>daedric armor</name>
+        <description>
+            <text>You found this armor stuffed into a barrel.</text>
+        </description>
+        <defence>3</defence>
+    </item>
+    
+    <object>
+        <id>object_vemynal_door</id>
+        <name>metal door</name>
+        <description>
+            <text>There is a metal door here.</text>
+        </description>
+        <use>
+            <what>item_dagoth_vemyn_key</what>
+            <result>
+                <set>unlockedVemynalDoor</set>
+                <remove>item_dagoth_vemyn_key</remove>
+                <description>
+                    <text>You turn the key inside the door lock and it clicks open.</text>
+                </description>
+            </result>
+        </use>
+    </object>
+    
+    <object>
+        <id>object_dagoth_door</id>
+        <name>door</name>
+        <description>
+            <requires>unlockedDagothDoor</requires>
+            <text>The door is now unlocked. Time to face Dagoth Ur.</text>
+        </description>
+        <description>
+            <text>There is a locked door in the wall here.</text>
+        </description>
+        <use>
+            <what>item_ascended_sleeper_key</what>
+            <result>
+                <set>unlockedDagothDoor</set>
+                <remove>item_ascended_sleeper_key</remove>
+                <description>
+                    <text>You unlock the door.</text>
+                </description>
+            </result>
+        </use>
+    </object>
+    
+    <object>
+        <id>object_heart_of_lorkhan</id>
+        <name>Heart of Lorkhan</name>
+        <description>
+<text>You see a brilliant red gem the size of your head
+  mounted in the robot's chest. If you allow Dagoth Ur to complete
+  Akulakhan, the Heart will serve as its power source
+  while it rampages across Tamriel.</text>
+        </description>
+        <use>
+            <requires>heartKeeningStrikeFourth</requires>
+            <what>item_keening</what>
+            <result>
+                <set>gameComplete</set>
+                <description>
+<text>You swing Keening for the fifth time.
+  The Heart loses its glow, and after a few seconds, shatters.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>killedDagothUrFinal</requires>
+            <what>item_keening</what>
+            <result>
+                <set>heartKeeningStrikeFourth</set>
+                <description>
+<text>This strike introduces a sudden dissonance to the sound
+  that sends a sharp note of pain through your mind.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>heartKeeningStrikeThird</requires>
+            <what>item_keening</what>
+            <result>
+                <description>
+                    <text>You can't manipulate the tone while Dagoth Ur is attacking you.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>heartKeeningStrikeSecond</requires>
+            <what>item_keening</what>
+            <result>
+                <set>heartKeeningStrikeThird</set>
+                <description>
+<text>The third strike to use Keening transforms the sound
+  emanating from the Heart of Lorkhan into
+  the most beautiful melody. However, Dagoth Ur rises
+  once again and tries his hardest to stop you
+  from completing your quest.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>heartKeeningStrikeFirst</requires>
+            <what>item_keening</what>
+            <result>
+                <set>heartKeeningStrikeSecond</set>
+                <description>
+<text>It's hard to describe, but the sound now starts
+  to harmonize and fold in on itself.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>killedDagothUrReal</requires>
+            <what>item_keening</what>
+            <result>
+                <set>heartKeeningStrikeFirst</set>
+                <description>
+<text>With the first strike to use Keening,
+  the sound of the Heart becomes much more orderly.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>heartSunderStrike</requires>
+            <what>item_keening</what>
+            <result>
+                <description>
+                    <text>You can't manipulate the tone while Dagoth Ur is attacking you.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <what>item_keening</what>
+            <result>
+                <description>
+                    <text>You need to strike the Heart with Sunder first.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <requires>heartSunderStrike</requires>
+            <what>item_sunder</what>
+            <result>
+                <description>
+                    <text>You do not need to use Sunder on the Heart again.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <what>item_sunder</what>
+            <result>
+                <set>heartSunderStrike</set>
+                <description>
+<text>You hit the gem with the hammer and a droning sound
+  that is more felt, rather than heard, rings out.
+  At the same time, Dagoth Ur appears on the platform
+  to the south and starts attacking you with spells.</text>
+                </description>
+            </result>
+        </use>
+        <interact>
+            <result>
+                <description>
+<text>You must use the tools of Kagrenac to have
+  any hope of destroying the Heart of Lorkhan.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_endusal_table</id>
+        <name>table</name>
+        <description>
+<text>There is table in the middle of the room full of various
+  dwarven artifacts. Maybe you can find something useful
+  if you dig through them.</text>
+        </description>
+        <interact>
+            <requires>gotDwarvenHalberd</requires>
+            <result>
+                <description>
+                    <text>There's nothing more on the table that would be useful to you.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>gotDwarvenHalberd</set>
+                <give>item_dwarven_halberd</give>
+                <description>
+<text>Among a bunch of gears, coins, mugs, plates and bowls
+  you find a dwarven halberd. Thankfully, it's not broken.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_dagoth_chest</id>
+        <name>wooden chest</name>
+        <description>
+            <text>You see a wooden chest by the wall.</text>
+        </description>
+        <interact>
+            <requires>gotStrongHealthPotion</requires>
+            <result>
+                <description>
+<text>You don't see anything else in the chest that
+  could be useful, and you'd rather not dig around
+  inside to check properly, when there might be
+  dangerous poisons spilled in there.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>gotStrongHealthPotion</set>
+                <give>item_dagoth_hp_potion_strong</give>
+                <description>
+<text>You open the chest and look inside.
+  It's full of shattered glass, but you spot one unbroken bottle.
+  You carefully pull it out, so as not to cut yourself.
+  It contains a quite potent healing potion.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_dagoth_barrel</id>
+        <name>dwemer barrel</name>
+        <description>
+            <text>There is a dwemer barrel next to some junk.</text>
+        </description>
+        <interact>
+            <requires>gotDaedricArmor</requires>
+            <result>
+                <description>
+                    <text>There's nothing more inside.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>gotDaedricArmor</set>
+                <give>item_daedric_armor</give>
+                <description>
+<text>You look inside the barrel and find a full set of armor.
+  Daedric armor, no less. Who would leave something so precious here?
+  Well, I suppose servants of Dagoth Ur aren't known for their
+  tight grip on reality.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_conjurer_body</id>
+        <name>body</name>
+        <description>
+            <requires>gotDwarvenArmor</requires>
+            <text>The body that you took the dwarven armor from is still there.</text>
+        </description>
+        <description>
+<text>There is a body of a breton lying on the ground.
+  He is dressed in dwarven armor.</text>
+        </description>
+        <interact>
+            <requires>gotDwarvenArmor</requires>
+            <result>
+                <description>
+                    <text>There's nothing more of interest on the body.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>gotDwarvenArmor</set>
+                <give>item_dwemer_armor</give>
+                <description>
+<text>You inspect the body. The breton has multiple wounds inflicted
+  by magical frost. Seems like he is responsible for the atronach
+  to the east being here, but lost control over the conjured creature.
+  You strip off his armor - it wasn't enough for him,
+  but it should be of great help to you.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_fire_fern</id>
+        <name>fire fern</name>
+        <description>
+            <requires>gotFirePetals</requires>
+            <text>The fire fern has no more petals to harvest.</text>
+        </description>
+        <description>
+            <text>There is a fire fern growing out of a crevice in the ground.</text>
+        </description>
+        <interact>
+            <requires>gotFirePetals</requires>
+            <result>
+                <description>
+                    <text>There are no more petals.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>gotFirePetals</set>
+                <give>item_fire_petals</give>
+                <description>
+                    <text>You pluck off all the fire petals.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_dwarven_crank</id>
+        <name>dwarven crank</name>
+        <description>
+<text>There is a dwarven crank attached to a pipe,
+  which sticks out of the ground near the entrance.</text>
+        </description>
+        <interact>
+            <requires>dwarvenCrankPulled</requires>
+            <result>
+                <description>
+                    <text>You already pulled this crank.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>dwarvenCrankPulled</set>
+                <description>
+<text>You pull the crank and hear rumbling inside the pipe,
+  as well as the hissing of some steam escaping through the gaps
+  in the ancient joints. Still, after a few seconds the door
+  hinges creak loudly and the door opens wide.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_body_cliff_racer</id>
+        <name>cliff racer</name>
+        <description>
+            <requires>killedCliffRacer</requires>
+<text>The relentless ash storms have already started
+  to cover up the body of the cliff racer that you've killed</text>
+        </description>
+        <description>
+            <text>There's a cliff racer blocking the path to the west</text>
+        </description>
+        <interact>
+            <requires>killedCliffRacer</requires>
+            <result>
+                <description>
+<text>You don't need this racer's plumes.
+  Everywhere you need to go, you can get on foot.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <description>
+                    <text>What, you want to pet it? Don't be dumb.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_dagger_rock</id>
+        <name>flat rock</name>
+        <description>
+            <requires>gotDagger</requires>
+            <text>You lifted the rock and found a dagger underneath.</text>
+        </description>
+        <description>
+            <text>There's a flat rock. Looks like it was moved recently.</text>
+        </description>
+        <interact>
+            <requires>gotDagger</requires>
+            <result>
+                <description>
+                    <text>There's nothing more under the rock.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>gotDagger</set>
+                <give>item_ebony_dagger</give>
+                <description>
+                    <text>You flip the rock over and find an ebony dagger beneath.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <object>
+        <id>object_alchemy_station</id>
+        <name>alchemy station</name>
+        <description>
+            <text>There's an alchemy station in the corner of the room.</text>
+        </description>
+        <use>
+            <what>item_ash_yam</what>
+            <result>
+                <set>putAshYam</set>
+                <remove>item_ash_yam</remove>
+                <description>
+                    <text>You grind the ash yam into a paste using the mortar and pestle.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <what>item_dreugh_wax</what>
+            <result>
+                <set>putDreughWax</set>
+                <remove>item_dreugh_wax</remove>
+                <description>
+                    <text>You transfer the wax to a flask and start melting it.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <what>item_fire_petals</what>
+            <result>
+                <set>putFirePetals</set>
+                <remove>item_fire_petals</remove>
+                <description>
+<text>You put the petals in a flask, place it over gentle heat, and wait
+  until the oils inside the petals vaporize and collect in a small vial.</text>
+                </description>
+            </result>
+        </use>
+        <use>
+            <what>item_frost_salts</what>
+            <result>
+                <set>putFrostSalts</set>
+                <remove>item_frost_salts</remove>
+                <description>
+                    <text>You assemble a filter out of the frost salts.</text>
+                </description>
+            </result>
+        </use>
+        <interact>
+            <requires>putFirePetals,putFrostSalts,not craftedFireResistancePotion</requires>
+            <result>
+                <set>craftedFireResistancePotion</set>
+                <give>item_fire_resistance_potion</give>
+                <description>
+<text>You run the solution of fire petal oils in spirits
+  a few times through the frost salts, until the bottle
+  it collects in becomes freezing to the touch,
+  and the liquid turns from clear orange to opaque white.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <requires>putAshYam,putDreughWax,not craftedStrengthPotion</requires>
+            <result>
+                <set>craftedStrengthPotion</set>
+                <give>item_strength_potion</give>
+                <description>
+<text>You combine the ash yam with the dreugh wax
+  and create a strength-fortifying potion.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <description>
+                    <text>You can't make any potion with what is currently here.</text>
+                </description>
+            </result>
+        </interact>
+    </object>
+    
+    <character>
+        <id>character_dunmer</id>
+        <name>dunmer</name>
+        <description>
+<text>A dunmer clad in shining glass armor sits at a table,
+  on which many documents and maps are laid out.</text>
+        </description>
+        <interact>
+            <requires>repeatableDunmerTalk</requires>
+            <result>
+                <description>
+<text>I'm afraid I cannot offer you any more assistance, Hortator.
+  Now it is all up to you.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <requires>completedKillMinorVampires</requires>
+            <result>
+                <set>repeatableDunmerTalk</set>
+                <set>obtainedWraithguard</set>
+                <give>item_wraithguard</give>
+                <description>
+<text>Hortator, perfect timing, I have Wraithguard right here.
+  If you put it on you should be able to safely handle Sunder
+  and Keening, which we've learned are in the possesion
+  of Dagoth Vemyn and Dagoth Odros, respectively.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <requires>firstDunmerTalk</requires>
+            <result>
+                <description>
+                    <text>Yes? Do you need something?</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>firstDunmerTalk</set>
+                <give>item_ash_yam</give>
+                <give>item_dreugh_wax</give>
+                <give>quest_kill_minor_vampires</give>
+                <description>
+<text>Good to see you here, Hortator. I know you are eager to stop the threat
+  of Dagoth Ur and his Sixth House, but the Armiger I've sent to bring
+  Wraithguard here still hasn't arrived. To not waste time you should take out
+  the two minor Ash Vampires: Endus and Tureynul. Their Citadels watch over
+  the paths that lead to where we suspect you will find Keening and Sunder,
+  and it is advisable to have no enemies behind your back while you
+  search for those crucial artifacts.
+  Before all that, you should prepare yourself for the ash storms outside.
+  Here is an ash yam and a portion of dreugh wax - mix up a potion
+  that will fortify your strength using the alchemy station
+  in the tower of Dawn. Speak to the healer that you will find there as well
+  if you haven't already, I'm sure you will require her services
+  many times before you complete your quest.</text>
+                </description>
+            </result>
+        </interact>
+    </character>
+
+    <character>
+        <id>character_healer</id>
+        <name>healer</name>
+        <description>
+            <text>A healer stands by a table covered in various tools</text>
+        </description>
+        <interact>
+            <requires>firstHealerTalk</requires>
+            <result>
+                <increaseHealth>999</increaseHealth>
+                <description>
+<text>The healer works quickly and efficiently.
+  It's apparent that her lack of recent practice hasn't
+  dulled her skill.</text>
+                </description>
+            </result>
+        </interact>
+        <interact>
+            <result>
+                <set>firstHealerTalk</set>
+                <give>item_healer_hp_potion</give>
+                <description>
+<text>The healer fiddles with her tools as you approach. It seems she didn't
+  get much opportunity to use them lately. She notices you and says:
+  "Muthsera, welcome. You'll be setting out to assault the Sixth House soon,
+  won't you? Few come back from inside the Ghostfence in a state that
+  allows me to help them. I've prepared a healing potion for you to use
+  while you're out there, but you can also talk to me again if you need
+  your wounds looked at".</text>
+                </description>
+            </result>
+        </interact>
+    </character>
+
+    <quest>
+        <id>quest_kill_minor_vampires</id>
+        <name>kill minor vampires</name>
+        <description>
+            <requires>killedTureynul</requires>
+            <text>I've killed Dagoth Tureynul, but Endus still remains.</text>
+        </description>
+        <description>
+            <requires>killedEndus</requires>
+            <text>Dagoth Endus has been defeated, but Tureynul still stands.</text>
+        </description>
+        <description>
+            <text>The dunmer told me to kill Dagoth Endus and Dagoth Tureynul </text>
+        </description>
+        <completion>
+            <requires>killedEndus,killedTureynul</requires>
+            <result>
+                <set>completedKillMinorVampires</set>
+                <description>
+<text>Quest complete! Check back with the dunmer in the Ghostgate,
+  Wraithguard should be waiting there for you.</text>
+                </description>
+            </result>
+        </completion>
+    </quest>
+    
+    <monster>
+        <id>monster_dagoth_ur_final</id>
+        <name>final Dagoth Ur</name>
+        <description>
+            <requires>killedDagothUrFinal</requires>
+<text>You should have enough time to strike the Heart of Lorkhan
+  with Keening twice more and defeat Dagoth Ur for good.</text>
+        </description>
+        <description>
+            <requires>not killedDagothUrFinal, heartKeeningStrikeThird</requires>
+<text>The final Dagoth Ur stands on the platform. He has risen up,
+  seemingly unharmed by your last fight, and keeps you away from the Heart
+  with precisely aimed spells.</text>
+        </description>
+        <health>20</health>
+        <damage>8</damage>
+        <defence>5</defence>
+        <kill>
+            <result>
+                <set>killedDagothUrFinal</set>
+                <description>
+<text>When Dagoth Ur falls for the third time, he sounds
+  almost annoyed. While he lies on the ground you must finish
+  your mission. You only need to strike the Heart of Lorkhan
+  two more times using Keening.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_dagoth_ur_real</id>
+        <name>real Dagoth Ur</name>
+        <description>
+            <requires>killedDagothUrReal,not heartKeeningStrikeThird</requires>
+<text>This time Dagoth Ur did not vanish. It is doubtful, however,
+  that he is actually dead. Still, you've gained some valuable time.</text>
+        </description>
+        <description>
+            <requires>not killedDagothUrReal, heartSunderStrike</requires>
+<text>The real Dagoth Ur stands on the platform, hurling spells at you.
+  You must defeat him before going back to the Heart.</text>
+        </description>
+        <health>20</health>
+        <damage>7</damage>
+        <defence>4</defence>
+        <kill>
+            <result>
+                <set>killedDagothUrReal</set>
+                <description>
+<text>As Dagoth Ur collapses to the ground, he calls out:
+  "Oh please Nerevar, Spare me! I surrender! I surrender!
+  Hahahahaha!". Before he inevitably comes back,
+  you need to start shaping the tone of the Heart with Keening.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_dagoth_ur_fake</id>
+        <name>Dagoth Ur</name>
+        <description>
+            <requires>killedDagothUrFake</requires>
+            <text>There is no body. What you fought was a fake.</text>
+        </description>
+        <description>
+<text>Dagoth Ur stands in the middle of the cave. He says:
+  "Welcome, sweet Nerevar, to this place where destiny is made.
+  Would you like to see Akulakhan? I'm sure you will be impressed".
+  He motions to the north, where you can see a door,
+  but it doesn't seem he will let you through until you fight him.</text>
+        </description>
+        <health>20</health>
+        <damage>4</damage>
+        <defence>2</defence>
+        <kill>
+            <result>
+                <set>killedDagothUrFake</set>
+                <description>
+<text>"Omnipotent. Omniscient. Sovereign. Immutable.
+  How sweet it is to be a god".
+  Dagoth Ur suddenly vanishes. You must have been fighting
+  a fake right now, conjured up by powerful magic.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_ascended_sleeper</id>
+        <name>ascended sleeper</name>
+        <description>
+            <requires>killedAscendedSleeper</requires>
+<text>It seems this creature was more magic than flesh.
+  Only a horrifically disfigured skull remains from its body,
+  the rest seemingly vaporized.</text>
+        </description>
+        <description>
+            <text>An ascended sleeper stands close to the door to Dagoth Ur's chamber.</text>
+        </description>
+        <health>20</health>
+        <damage>7</damage>
+        <defence>5</defence>
+        <kill>
+            <result>
+                <set>killedAscendedSleeper</set>
+                <give>item_ascended_sleeper_key</give>
+                <description>
+                    <text>The monster finally dies. You pick up a key that it dropped.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_ash_ghoul</id>
+        <name>ash ghoul</name>
+        <description>
+            <requires>killedAshGhoul</requires>
+            <text>The ash ghoul lies dead.</text>
+        </description>
+        <description>
+<text>An ash ghoul stands not far from you.
+  He is clearly aware of your presence, but does not attack. 
+  Instead, in a loud and confident voice he speaks:
+  "Welcome, Lord Nerevar. What brings you here? Have you come
+  to finally kneel before Dagoth Ur? I am sure your heart
+  will waver once you see his grand works,
+  and you will see the error of your ways.
+  Do not worry, for Dagoth Ur is merciful,
+  and he will certainly forgive his old friend".</text>
+        </description>
+        <health>15</health>
+        <damage>5</damage>
+        <defence>2</defence>
+        <kill>
+            <result>
+                <set>killedAshGhoul</set>
+                <description>
+                    <text>The ash ghoul collapses onto the floor.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_vemyn</id>
+        <name>Dagoth Vemyn</name>
+        <description>
+            <requires>killedVemyn</requires>
+            <text>There's nothing more of interest on Vemyn's body.</text>
+        </description>
+        <description>
+<text>Dagoth Vemyn holds Sunder and seems ready
+  to attack at any moment. He wouldn't let you leave
+  this room alive, even if you actually wanted to run away.</text>
+        </description>
+        <health>20</health>
+        <damage>7</damage>
+        <defence>3</defence>
+        <kill>
+            <result>
+                <set>killedVemyn</set>
+                <set>obtainedSunder</set>
+                <give>item_sunder</give>
+                <give>item_dagoth_vemyn_key</give>
+                <description>
+<text>Sunder drops out of Vemyn's hand and hits the floor with a loud bang.
+  You pick up the tool of Kagrenac and search the body
+  of the Ash Vampire. In one of his pockets you find a key.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_odros</id>
+        <name>Dagoth Odros</name>
+        <description>
+            <requires>killedOdros</requires>
+            <text>The body of Dagoth Odros is lying on the floor.</text>
+        </description>
+        <description>
+            <requires>pickedUpKeening</requires>
+            <text>Dagoth Odros is looking at you carefully.</text>
+        </description>
+        <description>
+<text>Something feels off here. Why is Dagoth Odros
+  nowhere to be found? You should only touch Keening
+  if you are fully prepared.</text>
+        </description>
+        <health>10</health>
+        <damage>6</damage>
+        <defence>4</defence>
+        <kill>
+            <result>
+                <set>killedOdros</set>
+                <give>item_dwemer_puzzle_box</give>
+                <description>
+<text>The battle was tough, but you prevailed.
+  Dagoth Odros drops to the floor and a dwemer puzzle box
+  falls out of his hand. You pick it up and look around.
+  There must be some other way out of this room.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_tureynul</id>
+        <name>Dagoth Tureynul</name>
+        <description>
+            <requires>killedTureynul</requires>
+            <text>Tureynul lies dead on the ground.</text>
+        </description>
+        <description>
+<text>Dagoth Tureynul stands in front of a vile altar.
+  He is chanting a song praising Dagoth Ur.</text>
+        </description>
+        <health>10</health>
+        <damage>6</damage>
+        <defence>2</defence>
+        <kill>
+            <result>
+                <set>killedTureynul</set>
+                <description>
+                    <text>Tureynul falls dead.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_endus</id>
+        <name>Dagoth Endus</name>
+        <description>
+            <requires>killedEndus</requires>
+<text>The body of Dagoth Endus lies on the floor.
+  His fingers have turned into claws due to corprus,
+  perfect for ripping through raw flesh.</text>
+        </description>
+        <description>
+<text>Dagoth Endus is either ignoring you, or hasn't
+  noticed you yet. He is performing some ritual.</text>
+        </description>
+        <health>15</health>
+        <damage>5</damage>
+        <defence>3</defence>
+        <kill>
+            <result>
+                <set>killedEndus</set>
+                <description>
+<text>Endus falls dead to the ground.
+  If you had Wraithguard, you could now safely enter Vemynal.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_frost_atronach</id>
+        <name>frost atronach</name>
+        <description>
+            <requires>killedFrostAtronach</requires>
+            <text>The husk of the atronach is slowly melting on the floor.</text>
+        </description>
+        <description>
+<text>A frost atronach stands in the far back of the cave.
+  Despite the distance and the weather outside, you feel
+  so cold you start to shiver.</text>
+        </description>
+        <health>12</health>
+        <damage>4</damage>
+        <defence>2</defence>
+        <kill>
+            <result>
+                <set>killedFrostAtronach</set>
+                <give>item_frost_salts</give>
+                <description>
+<text>You defeat the atronach and harvest
+  frost salts from its body.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_corprus_stalker</id>
+        <name>corprus stalker</name>
+        <description>
+            <requires>killedCorprusStalker</requires>
+<text>The disfigured body of the stalker
+  lies face down in the ash.</text>
+        </description>
+        <description>
+<text>A corprus stalker blocks the path. Its body is covered
+  in sores and it stands there, moaning in pain.
+  Make sure your weapon is strong enough to cut it down.</text>
+        </description>
+        <health>8</health>
+        <damage>1</damage>
+        <defence>4</defence>
+        <kill>
+            <result>
+                <set>killedCorprusStalker</set>
+                <description>
+<text>The stalker finally falls, but it reacted so little to your attacks,
+  that it is unclear whether that was what ended its life,
+  or has the corprus disease taken it at last.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+    
+    <monster>
+        <id>monster_ash_zombie</id>
+        <name>ash zombie</name>
+        <description>
+            <requires>killedAshZombie</requires>
+<text>The body of an ash zombie lies here. A truly grotesque sight,
+  its body is deathly thin and covered in scars, and it had
+  the upper half of its face carved out.</text>
+        </description>
+        <description>
+<text>There is an ash zombie wandering around,
+  mumbling to itself. It seems to not have noticed you.
+  It would be best to put it out of its misery.</text>
+        </description>
+        <health>10</health>
+        <damage>3</damage>
+        <defence>2</defence>
+        <kill>
+            <result>
+                <set>killedAshZombie</set>
+                <increaseMaxHP>5</increaseMaxHP>
+                <description>
+<text>The pitiful creature falls dead.
+  Your resolve to stop Dagoth Ur has never been greater.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+
+    <monster>
+        <id>monster_cliff_racer</id>
+        <name>cliff racer</name>
+        <description><requires>impossible</requires><text>technical requirement</text></description>
+        <health>5</health>
+        <damage>2</damage>
+        <defence>0</defence>
+        <kill>
+            <result>
+                <set>killedCliffRacer</set>
+                <description>
+<text>The cliff racer collapses from its wounds.
+  The western path is now open.</text>
+                </description>
+            </result>
+        </kill>
+    </monster>
+</game>
